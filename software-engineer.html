@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Associate Credential Architect – CertifyMe | Neeraj VS Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%;
+      --border: 240 5.9% 90%;
+    }
+
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --border: 240 3.7% 15.9%;
+    }
+
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .card {
+      background-color: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: 1rem;
+    }
+
+    .text-muted {
+      color: hsl(var(--muted-foreground));
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: hsl(var(--muted));
+      color: hsl(var(--muted-foreground));
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <nav style="border-bottom: 1px solid hsl(var(--border)); background-color: hsl(var(--background) / 0.95);"
+    class="sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="classic.html" class="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        Back to Portfolio
+      </a>
+      <span class="text-sm font-heading font-bold">Neeraj VS</span>
+      <button onclick="document.documentElement.classList.toggle('dark')"
+        class="p-2 rounded-full hover:opacity-70 transition-opacity">
+        <i data-lucide="sun" class="w-4 h-4 dark:hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"
+        style="background-color: hsl(var(--muted)); color: hsl(var(--muted-foreground));">
+        <i data-lucide="briefcase" class="w-4 h-4"></i>
+        Full-Time &bull; On-Site
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-heading font-bold mb-4">Associate Credential Architect (QA Tester)</h1>
+      <p class="text-xl text-muted mb-2">CertifyMe</p>
+      <p class="text-muted">Bangalore, India &bull; 01/2025 – Present</p>
+    </div>
+
+    <!-- Profile -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+        <i data-lucide="user" class="w-5 h-5"></i>
+        Role Profile
+      </h2>
+      <p class="text-muted leading-relaxed">
+        Quality Assurance and Automation tester ensuring stable, secure releases across CertifyMe's SaaS platform.
+        Focused on functional/UI testing, API validation, microservices integration, and release readiness with strong
+        defect management and reporting.
+      </p>
+    </div>
+
+    <!-- Job Description -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+        <i data-lucide="file-text" class="w-5 h-5"></i>
+        Job Description
+      </h2>
+      <p class="text-muted leading-relaxed">
+        Perform manual, regression, and API testing for web/mobile apps; validate microservices and backend
+        integrations; and lead production deployments for Batch, Verify, Signing, and Cryptographic Signing services.
+      </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="zap" class="w-5 h-5"></i>
+        Tools & Technologies
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="badge">Postman</span>
+        <span class="badge">Selenium</span>
+        <span class="badge">Python</span>
+        <span class="badge">JMeter</span>
+        <span class="badge">Jira</span>
+        <span class="badge">Git &amp; GitHub</span>
+        <span class="badge">SQL</span>
+      </div>
+    </div>
+
+    <!-- Responsibilities -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="list-checks" class="w-5 h-5"></i>
+        Key Responsibilities
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 mt-0.5 shrink-0" style="color: hsl(var(--primary));"></i>
+          <span class="text-muted">Design and execution of functional, UI/UX, and regression test cases</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 mt-0.5 shrink-0" style="color: hsl(var(--primary));"></i>
+          <span class="text-muted">API testing and microservices validation using Postman</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 mt-0.5 shrink-0" style="color: hsl(var(--primary));"></i>
+          <span class="text-muted">Defect documentation, triage, and tracking to resolution in Jira</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 mt-0.5 shrink-0" style="color: hsl(var(--primary));"></i>
+          <span class="text-muted">Release readiness, smoke tests, and deployment verification</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 mt-0.5 shrink-0" style="color: hsl(var(--primary));"></i>
+          <span class="text-muted">Leading production deployments for Batch, Verify, Signing, and Crypto-Signing
+            services</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Achievements -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="trophy" class="w-5 h-5"></i>
+        Key Achievements
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center p-6 rounded-xl" style="background-color: hsl(var(--muted));">
+          <div class="text-3xl font-heading font-bold mb-2">150+</div>
+          <div class="text-sm text-muted">Manual &amp; API Test Cases Executed</div>
+        </div>
+        <div class="text-center p-6 rounded-xl" style="background-color: hsl(var(--muted));">
+          <div class="text-3xl font-heading font-bold mb-2">0</div>
+          <div class="text-sm text-muted">Customer-Facing Defects Across Two Quarters</div>
+        </div>
+        <div class="text-center p-6 rounded-xl" style="background-color: hsl(var(--muted));">
+          <div class="text-3xl font-heading font-bold mb-2">70%</div>
+          <div class="text-sm text-muted">Regression Automation Coverage (Selenium/Python)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back button -->
+    <div class="text-center">
+      <a href="classic.html#experience"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-colors"
+        style="background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground));">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        Back to Experience
+      </a>
+    </div>
+
+  </main>
+
+  <script>
+      (function () {
+        const root = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') root.classList.add('dark');
+        if (saved === 'light') root.classList.remove('dark');
+        function sync() { localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); }
+        const btns = document.querySelectorAll('nav button');
+        btns.forEach(b => b.addEventListener('click', () => setTimeout(sync, 0)));
+      })();
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

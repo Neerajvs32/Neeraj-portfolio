@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>BCA – Shree Guru Sudhindra College | Neeraj VS Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] } } }
+    }
+  </script>
+  <style>
+    :root { --background:0 0% 100%;--foreground:240 10% 3.9%;--card:0 0% 100%;--primary:240 5.9% 10%;--primary-foreground:0 0% 98%;--muted:240 4.8% 95.9%;--muted-foreground:240 3.8% 46.1%;--border:240 5.9% 90%; }
+    .dark { --background:240 10% 3.9%;--foreground:0 0% 98%;--card:240 10% 3.9%;--primary:0 0% 98%;--primary-foreground:240 5.9% 10%;--muted:240 3.7% 15.9%;--muted-foreground:240 5% 64.9%;--border:240 3.7% 15.9%; }
+    body { background-color:hsl(var(--background));color:hsl(var(--foreground));font-family:'Plus Jakarta Sans',sans-serif;transition:background-color 0.3s,color 0.3s; }
+    .card { background-color:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem; }
+    .text-muted { color:hsl(var(--muted-foreground)); }
+    .badge { display:inline-flex;align-items:center;padding:0.25rem 0.75rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background-color:hsl(var(--muted));color:hsl(var(--muted-foreground)); }
+  </style>
+</head>
+<body>
+  <nav style="border-bottom:1px solid hsl(var(--border));background-color:hsl(var(--background)/0.95);" class="sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="classic.html#education" class="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+      </a>
+      <span class="text-sm font-heading font-bold">Neeraj VS</span>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:opacity-70 transition-opacity">
+        <i data-lucide="sun" class="w-4 h-4 dark:hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6" style="background-color:hsl(var(--muted));color:hsl(var(--muted-foreground));">
+        <i data-lucide="graduation-cap" class="w-4 h-4"></i> Undergraduate Degree &bull; Completed
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-heading font-bold mb-4">Bachelor of Computer Applications</h1>
+      <p class="text-xl text-muted max-w-2xl mx-auto">Shree Guru Sudhindra College of Computer Application, Bhatkal &mdash; 2019&ndash;2022</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-6 mb-10">
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">82.39%</div>
+        <div class="text-sm text-muted">Percentage</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">2019–2022</div>
+        <div class="text-sm text-muted">Duration</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">Completed</div>
+        <div class="text-sm text-muted">Status</div>
+      </div>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div><div class="text-sm text-muted mb-1">Degree</div><div class="font-semibold">BCA</div></div>
+        <div><div class="text-sm text-muted mb-1">Institution</div><div class="font-semibold">Shree Guru Sudhindra College</div></div>
+        <div><div class="text-sm text-muted mb-1">Score</div><div class="font-semibold" style="color:hsl(142 76% 36%);">82.39%</div></div>
+      </div>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+        <i data-lucide="file-text" class="w-5 h-5"></i> About the Program
+      </h2>
+      <p class="text-muted leading-relaxed mb-6">The Bachelor of Computer Applications at Shree Guru Sudhindra College of Computer Application provided a solid grounding in core computer science concepts, programming languages, and software development practices. The three-year program balanced coursework with practical lab projects.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div><h3 class="font-semibold mb-2">Focus Areas</h3><p class="text-muted text-sm leading-relaxed">Programming fundamentals, Database Management, Operating Systems, Data Structures, and Web Development.</p></div>
+        <div><h3 class="font-semibold mb-2">Key Takeaway</h3><p class="text-muted text-sm leading-relaxed">Built a strong programming base and analytical mindset that formed the foundation for further specialization in software quality assurance.</p></div>
+      </div>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="list-checks" class="w-5 h-5"></i> Key Subjects
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">C, C++, Java Programming</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Database Management Systems</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Data Structures &amp; Algorithms</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Web Development (HTML, CSS, JavaScript)</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Operating Systems</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Software Engineering Principles</span></li>
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <a href="classic.html#education" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium" style="background-color:hsl(var(--primary));color:hsl(var(--primary-foreground));">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Education
+      </a>
+    </div>
+  </main>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

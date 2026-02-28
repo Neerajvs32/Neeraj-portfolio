@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Tech-Gram | Neeraj VS Portfolio</title>
+  <meta name="description" content="Tech-Gram: Community-focused web app built with HTML, CSS, JavaScript; accessibility-first with extensive manual and regression testing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] } } } }
+  </script>
+  <style>
+    :root { --background:0 0% 100%;--foreground:240 10% 3.9%;--card:0 0% 100%;--primary:240 5.9% 10%;--primary-foreground:0 0% 98%;--muted:240 4.8% 95.9%;--muted-foreground:240 3.8% 46.1%;--border:240 5.9% 90%; }
+    .dark { --background:240 10% 3.9%;--foreground:0 0% 98%;--card:240 10% 3.9%;--primary:0 0% 98%;--primary-foreground:240 5.9% 10%;--muted:240 3.7% 15.9%;--muted-foreground:240 5% 64.9%;--border:240 3.7% 15.9%; }
+    body { background-color:hsl(var(--background));color:hsl(var(--foreground));font-family:'Plus Jakarta Sans',sans-serif;transition:background-color 0.3s,color 0.3s; }
+    .card { background-color:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem; }
+    .text-muted { color:hsl(var(--muted-foreground)); }
+    .badge { display:inline-flex;align-items:center;padding:0.25rem 0.75rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background-color:hsl(var(--muted));color:hsl(var(--muted-foreground)); }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav style="border-bottom:1px solid hsl(var(--border));background-color:hsl(var(--background)/0.95);" class="sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="classic.html#projects" class="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+      </a>
+      <span class="text-sm font-heading font-bold">Neeraj VS</span>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:opacity-70 transition-opacity">
+        <i data-lucide="sun" class="w-4 h-4 dark:hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6" style="background-color:hsl(var(--muted));color:hsl(var(--muted-foreground));">
+        <i data-lucide="users" class="w-4 h-4"></i> Community Platform • Completed
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-heading font-bold mb-4">Tech-Gram</h1>
+      <p class="text-xl text-muted max-w-2xl mx-auto">A lightweight, accessibility-first web app designed to improve usability for rural communities with simple navigation, readable typography, and mobile-first layouts.</p>
+    </div>
+
+    <!-- Meta -->
+    <div class="grid grid-cols-3 gap-6 mb-10">
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">01/2024 – 06/2024</div>
+        <div class="text-sm text-muted">Timeline</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">150+</div>
+        <div class="text-sm text-muted">Test Cases Executed</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">A11y</div>
+        <div class="text-sm text-muted">Accessibility Focus</div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+        <i data-lucide="file-text" class="w-5 h-5"></i> Overview
+      </h2>
+      <p class="text-muted leading-relaxed mb-6">Designed and implemented core frontend features using HTML, CSS, and JavaScript. Emphasis on accessibility, performance, and low-bandwidth optimization to support rural user bases. Conducted manual and regression testing to validate functionality, stability, and accessibility compliance.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold mb-2">Objectives</h3>
+          <p class="text-muted text-sm leading-relaxed">Deliver a simple, inclusive UI with strong readability and clear interactions; ensure reliability across low-end Android devices and poor network conditions.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Outcomes</h3>
+          <p class="text-muted text-sm leading-relaxed">Met accessibility goals, reduced bounce on mobile, and validated end-to-end flows with comprehensive test cases and regression cycles.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="list-checks" class="w-5 h-5"></i> Key Features
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5" style="color:hsl(var(--primary));"></i><span class="text-muted">Accessible UI with large tap targets and high-contrast themes</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5" style="color:hsl(var(--primary));"></i><span class="text-muted">Lightweight, offline-friendly pages for low bandwidth</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5" style="color:hsl(var(--primary));"></i><span class="text-muted">Responsive mobile-first layouts and semantic HTML</span></li>
+      </ul>
+    </div>
+
+    <!-- Technologies -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="zap" class="w-5 h-5"></i> Technologies Used
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="badge">HTML5</span>
+        <span class="badge">CSS3</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">WCAG (A11y)</span>
+        <span class="badge">Manual & Regression Testing</span>
+      </div>
+    </div>
+
+    <!-- QA Highlights -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="bug" class="w-5 h-5"></i> QA Highlights
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 mt-0.5" style="color:hsl(var(--primary));"></i><span class="text-muted">Executed 150+ end-to-end, UI, and regression test cases across web platforms</span></li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 mt-0.5" style="color:hsl(var(--primary));"></i><span class="text-muted">Validated accessibility using semantic markup and contrast checks</span></li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 mt-0.5" style="color:hsl(var(--primary));"></i><span class="text-muted">Logged and tracked defects through closure; re-tested to confirm fixes</span></li>
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <a href="classic.html#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium" style="background-color:hsl(var(--primary));color:hsl(var(--primary-foreground));">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Projects
+      </a>
+    </div>
+  </main>
+  <script>
+    (function(){
+      const root = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') root.classList.add('dark');
+      if (saved === 'light') root.classList.remove('dark');
+      function sync(){ localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); }
+      const btns = document.querySelectorAll('nav button');
+      btns.forEach(b=> b.addEventListener('click', ()=> setTimeout(sync,0)));
+    })();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

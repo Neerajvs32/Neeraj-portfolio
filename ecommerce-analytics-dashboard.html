@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>E-Commerce Analytics Dashboard | Neeraj VS Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] } } }
+    }
+  </script>
+  <style>
+    :root {
+      --background: 0 0% 100%; --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%; --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%; --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%; --border: 240 5.9% 90%;
+    }
+    .dark {
+      --background: 240 10% 3.9%; --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%; --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%; --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%; --border: 240 3.7% 15.9%;
+    }
+    body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s, color 0.3s; }
+    .card { background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 1rem; }
+    .text-muted { color: hsl(var(--muted-foreground)); }
+    .badge { display: inline-flex; align-items: center; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; background-color: hsl(var(--muted)); color: hsl(var(--muted-foreground)); }
+  </style>
+</head>
+<body>
+  <nav style="border-bottom:1px solid hsl(var(--border));background-color:hsl(var(--background)/0.95);" class="sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="classic.html#projects" class="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+      </a>
+      <span class="text-sm font-heading font-bold">Neeraj VS</span>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:opacity-70 transition-opacity">
+        <i data-lucide="sun" class="w-4 h-4 dark:hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6" style="background-color:hsl(var(--muted));color:hsl(var(--muted-foreground));">
+        <i data-lucide="bar-chart-2" class="w-4 h-4"></i> Analytics Platform &bull; Completed
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-heading font-bold mb-4">E-Commerce Analytics Dashboard</h1>
+      <p class="text-xl text-muted max-w-2xl mx-auto">A real-time analytics solution for e-commerce businesses to monitor product performance, customer behavior, and sales KPIs.</p>
+    </div>
+
+    <!-- Meta info -->
+    <div class="grid grid-cols-3 gap-6 mb-10">
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">18,000</div>
+        <div class="text-sm text-muted">Lines of Code</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">320</div>
+        <div class="text-sm text-muted">Commits</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">8 months</div>
+        <div class="text-sm text-muted">Duration</div>
+      </div>
+    </div>
+
+    <!-- Project Info Row -->
+    <div class="card p-8 mb-10">
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div>
+          <div class="text-sm text-muted mb-1">Role</div>
+          <div class="font-semibold">Frontend Developer</div>
+        </div>
+        <div>
+          <div class="text-sm text-muted mb-1">Team Size</div>
+          <div class="font-semibold">4 members</div>
+        </div>
+        <div>
+          <div class="text-sm text-muted mb-1">Status</div>
+          <div class="font-semibold" style="color:hsl(142 76% 36%);">Completed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+        <i data-lucide="file-text" class="w-5 h-5"></i> Overview
+      </h2>
+      <p class="text-muted leading-relaxed mb-6">A real-time analytics solution designed for e-commerce businesses to monitor product performance, customer behavior, conversions, and sales KPIs in interactive dashboards.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold mb-2">Objective</h3>
+          <p class="text-muted text-sm leading-relaxed">Enable businesses to make data-driven decisions using accessible and visualized insights.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Outcome</h3>
+          <p class="text-muted text-sm leading-relaxed">Successfully implemented, helping business analysts and managers track sales insights in real time and optimize growth based on visual metrics.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="list-checks" class="w-5 h-5"></i> Key Features
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Real-time Sales Monitoring</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Conversion Funnel Analysis</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Product Click &amp; View Heatmaps</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Customer Dashboard</span></li>
+      </ul>
+    </div>
+
+    <!-- Technologies -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="zap" class="w-5 h-5"></i> Technologies Used
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="badge">React.js</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">MongoDB</span>
+        <span class="badge">D3.js</span>
+        <span class="badge">REST APIs</span>
+      </div>
+    </div>
+
+    <!-- Challenges -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="alert-triangle" class="w-5 h-5"></i> Challenges
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 mt-0.5 shrink-0 text-muted"></i><span class="text-muted">Processing large volumes of real-time data</span></li>
+        <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 mt-0.5 shrink-0 text-muted"></i><span class="text-muted">Creating intuitive data visualizations</span></li>
+        <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 mt-0.5 shrink-0 text-muted"></i><span class="text-muted">Ensuring fast query performance</span></li>
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <a href="classic.html#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium" style="background-color:hsl(var(--primary));color:hsl(var(--primary-foreground));">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Projects
+      </a>
+    </div>
+  </main>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

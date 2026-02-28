@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Secondary School | Aisha Banu Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%;
+      --border: 240 5.9% 90%;
+    }
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --border: 240 3.7% 15.9%;
+    }
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .card { background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 1rem; }
+    .text-muted { color: hsl(var(--muted-foreground)); }
+    .gpa-bar-bg { background-color: hsl(var(--muted)); border-radius: 9999px; height: 8px; }
+    .gpa-bar-fill { background-color: hsl(var(--primary)); border-radius: 9999px; height: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav style="border-bottom: 1px solid hsl(var(--border)); background-color: hsl(var(--background) / 0.95);" class="sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="classic.html" class="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        Back to Portfolio
+      </a>
+      <span class="text-sm font-heading font-bold">Aisha Banu</span>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:opacity-70 transition-opacity">
+        <i data-lucide="sun" class="w-4 h-4 dark:hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6" style="background-color: hsl(var(--muted)); color: hsl(var(--muted-foreground));">
+        <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+        Secondary Education
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-heading font-bold mb-4">Secondary School</h1>
+      <p class="text-xl text-muted mb-2">Global Senior Secondary School</p>
+      <p class="text-muted">Bangalore, India &bull; 2015 – 2016</p>
+    </div>
+
+    <!-- Description Card -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+        <i data-lucide="file-text" class="w-5 h-5"></i>
+        Overview
+      </h2>
+      <p class="text-muted leading-relaxed">
+        Completed Class 10 with strong academic results, securing high marks across core subjects including
+        Science, Mathematics, Social Studies, and English. Performed consistently in internal examinations,
+        practical assessments, and the final board examination. Demonstrated excellent discipline, focus, and
+        learning abilities, laying a strong foundation for future academic growth.
+      </p>
+    </div>
+
+    <!-- Year Performance -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-8 flex items-center gap-2">
+        <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+        Academic Performance
+      </h2>
+      <div class="space-y-6">
+        <div class="flex items-center gap-4">
+          <span class="w-24 text-sm text-muted shrink-0">Class 8</span>
+          <div class="flex-1 gpa-bar-bg"><div class="gpa-bar-fill" style="width: 91%"></div></div>
+          <span class="w-12 text-right text-sm font-bold">91%</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-24 text-sm text-muted shrink-0">Class 9</span>
+          <div class="flex-1 gpa-bar-bg"><div class="gpa-bar-fill" style="width: 85%"></div></div>
+          <span class="w-12 text-right text-sm font-bold">85%</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-24 text-sm text-muted shrink-0">Class 10</span>
+          <div class="flex-1 gpa-bar-bg"><div class="gpa-bar-fill" style="width: 87%"></div></div>
+          <span class="w-12 text-right text-sm font-bold">87%</span>
+        </div>
+      </div>
+      <div class="mt-8 pt-6" style="border-top: 1px solid hsl(var(--border));">
+        <div class="flex justify-between items-center">
+          <span class="text-muted text-sm">Board Examination Result</span>
+          <span class="text-2xl font-heading font-bold">87% (Class 10)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subjects -->
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Core Subjects
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center p-4 rounded-xl" style="background-color: hsl(var(--muted));">
+          <div class="text-2xl mb-2">🔬</div>
+          <div class="text-sm font-medium">Science</div>
+        </div>
+        <div class="text-center p-4 rounded-xl" style="background-color: hsl(var(--muted));">
+          <div class="text-2xl mb-2">📐</div>
+          <div class="text-sm font-medium">Mathematics</div>
+        </div>
+        <div class="text-center p-4 rounded-xl" style="background-color: hsl(var(--muted));">
+          <div class="text-2xl mb-2">🌍</div>
+          <div class="text-sm font-medium">Social Studies</div>
+        </div>
+        <div class="text-center p-4 rounded-xl" style="background-color: hsl(var(--muted));">
+          <div class="text-2xl mb-2">📝</div>
+          <div class="text-sm font-medium">English</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back button -->
+    <div class="text-center">
+      <a href="classic.html#education" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-colors"
+        style="background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground));">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        Back to Education
+      </a>
+    </div>
+
+  </main>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

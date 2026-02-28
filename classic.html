@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Neeraj V Salehittal - Software QA Engineer Portfolio</title>
+  <meta name="description"
+    content="Software QA Engineer | MCA Graduate specializing in manual, API, regression, and automation testing across SaaS platforms." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          },
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--primary))",
+              foreground: "hsl(var(--primary-foreground))",
+            },
+            secondary: {
+              DEFAULT: "hsl(var(--secondary))",
+              foreground: "hsl(var(--secondary-foreground))",
+            },
+            destructive: {
+              DEFAULT: "hsl(var(--destructive))",
+              foreground: "hsl(var(--destructive-foreground))",
+            },
+            muted: {
+              DEFAULT: "hsl(var(--muted))",
+              foreground: "hsl(var(--muted-foreground))",
+            },
+            accent: {
+              DEFAULT: "hsl(var(--accent))",
+              foreground: "hsl(var(--accent-foreground))",
+            },
+            popover: {
+              DEFAULT: "hsl(var(--popover))",
+              foreground: "hsl(var(--popover-foreground))",
+            },
+            card: {
+              DEFAULT: "hsl(var(--card))",
+              foreground: "hsl(var(--card-foreground))",
+            },
+          },
+          borderRadius: {
+            lg: "var(--radius)",
+            md: "calc(var(--radius) - 2px)",
+            sm: "calc(var(--radius) - 4px)",
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- CSS Variables & Custom Styles -->
+  <style>
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 240 4.8% 95.9%;
+      --secondary-foreground: 240 5.9% 10%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%;
+      --accent: 240 4.8% 95.9%;
+      --accent-foreground: 240 5.9% 10%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 5.9% 90%;
+      --input: 240 5.9% 90%;
+      --ring: 240 5.9% 10%;
+      --radius: 0.75rem;
+    }
+
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --accent: 240 3.7% 15.9%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 3.7% 15.9%;
+      --input: 240 3.7% 15.9%;
+      --ring: 240 4.9% 83.9%;
+    }
+
+    .gradient {
+      --background: 260 50% 10%;
+      --foreground: 210 40% 98%;
+      --card: 260 50% 15%;
+      --card-foreground: 210 40% 98%;
+      --popover: 260 50% 15%;
+      --popover-foreground: 210 40% 98%;
+      --primary: 280 80% 60%;
+      --primary-foreground: 210 40% 98%;
+      --secondary: 260 30% 20%;
+      --secondary-foreground: 210 40% 98%;
+      --muted: 260 30% 20%;
+      --muted-foreground: 260 20% 70%;
+      --accent: 320 80% 60%;
+      --accent-foreground: 210 40% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 260 30% 25%;
+      --input: 260 30% 25%;
+      --ring: 280 80% 60%;
+    }
+
+    body {
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .glass {
+      background-color: hsl(var(--background) / 0.6);
+      backdrop-filter: blur(16px);
+      border: 1px solid hsl(0 0% 100% / 0.1);
+    }
+
+    .gradient .glass {
+      background-color: hsl(0 0% 100% / 0.05);
+      backdrop-filter: blur(24px);
+      border: 1px solid hsl(0 0% 100% / 0.1);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: hsl(var(--muted-foreground) / 0.2);
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: hsl(var(--muted-foreground) / 0.4);
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fade-up 0.8s ease-out forwards;
+    }
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skill-card {
+      background-color: hsl(var(--card));
+      border: 1px solid hsl(var(--border) / 0.5);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-card:hover {
+      box-shadow: 0 4px 16px hsl(var(--foreground) / 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Timeline styles */
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: hsl(var(--border));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .timeline-item:nth-child(odd) {
+      justify-content: flex-start;
+    }
+
+    .timeline-item:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: hsl(var(--card));
+      border: 3px solid hsl(var(--primary));
+      z-index: 2;
+    }
+
+    .timeline-content {
+      background-color: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: 12px;
+      padding: 30px;
+      width: 45%;
+      box-shadow: 0 2px 8px hsl(var(--foreground) / 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      box-shadow: 0 4px 16px hsl(var(--foreground) / 0.1);
+      transform: translateY(-2px);
+    }
+
+    .timeline-date {
+      font-size: 12px;
+      color: hsl(var(--muted-foreground));
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .timeline-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: hsl(var(--card-foreground));
+      margin-bottom: 6px;
+    }
+
+    .timeline-company {
+      font-size: 16px;
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 16px;
+    }
+
+    .timeline-description {
+      font-size: 14px;
+      color: hsl(var(--muted-foreground));
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        justify-content: flex-start !important;
+        padding-left: 40px;
+      }
+
+      .timeline-content {
+        width: 100%;
+      }
+    }
+
+    /* Intro button */
+    .intro-video-btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-video-btn:hover .play-icon svg {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+
+    .intro-video-btn .play-icon svg {
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased transition-colors duration-300">
+
+  <!-- ===== NAVIGATION ===== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <a href="classic.html" class="hover:opacity-80 transition-opacity font-heading font-bold text-xl tracking-tight">
+        Neeraj VS
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+
+        <!-- Projects Dropdown -->
+        <div class="relative group">
+          <a href="#projects" class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+            Projects
+            <i data-lucide="chevron-down" class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div
+            class="absolute top-full left-0 mt-2 w-72 bg-background border border-border/50 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="p-2">
+              <a href="tech-gram.html"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">Tech-Gram</a>
+              <a href="on-road-vehicle-breakdown.html"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">On-Road
+                Vehicle Breakdown System</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Dropdown -->
+        <div class="relative group">
+          <a href="#education" class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+            Education
+            <i data-lucide="chevron-down" class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div
+            class="absolute top-full left-0 mt-2 w-64 bg-background border border-border/50 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="p-2">
+              <a href="btech.html"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">Master
+                of Computer Application (MCA)</a>
+              <a href="higher-secondary.html"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">Bachelor's
+                of Computer Application (BCA)</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Dropdown -->
+        <div class="relative group">
+          <a href="#experience"
+            class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+            Experience
+            <i data-lucide="chevron-down" class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div
+            class="absolute top-full left-0 mt-2 w-64 bg-background border border-border/50 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="p-2">
+              <a href="software-engineer.html"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">Associate
+                Credential Architect – CertifyMe</a>
+              <a href="lab-assistance.html"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">QA
+                Intern – CertifyMe</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#skills" class="text-sm font-medium hover:text-primary transition-colors">Skills</a>
+
+        <!-- Feedback Dropdown -->
+        <div class="relative group">
+          <a href="#achievements"
+            class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+            Feedback
+            <i data-lucide="chevron-down" class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200"></i>
+          </a>
+          <div
+            class="absolute top-full left-0 mt-2 w-48 bg-background border border-border/50 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="p-2">
+              <a href="#achievements"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">Achievements</a>
+              <a href="#testimonials"
+                class="block px-3 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-md transition-colors">Endorsements</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="p-2 rounded-full border border-border/50 hover:bg-muted transition-colors">
+          <i data-lucide="sun" class="w-5 h-5 dark:hidden gradient:hidden"></i>
+          <i data-lucide="moon" class="w-5 h-5 hidden dark:block gradient:hidden"></i>
+          <i data-lucide="sparkles" class="w-5 h-5 hidden gradient:block text-primary"></i>
+        </button>
+
+        <a href="/files/nova.pdf" download
+          class="bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-6 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-colors">
+          Download CV
+        </a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <div class="flex items-center gap-4 md:hidden">
+        <button id="mobile-theme-toggle" class="p-2 rounded-full border border-border/50">
+          <i data-lucide="sun" class="w-5 h-5 dark:hidden gradient:hidden"></i>
+          <i data-lucide="moon" class="w-5 h-5 hidden dark:block gradient:hidden"></i>
+          <i data-lucide="sparkles" class="w-5 h-5 hidden gradient:block text-primary"></i>
+        </button>
+        <button id="menu-toggle" class="p-2 text-foreground">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-background border-b border-border/40 absolute top-full left-0 right-0 shadow-lg">
+      <nav class="flex flex-col p-6 gap-4">
+        <a href="#about" class="text-lg font-medium py-2 border-b border-border/10">About</a>
+
+        <div class="border-b border-border/10 pb-2">
+          <div class="text-lg font-medium py-2">Projects</div>
+          <div class="pl-4 space-y-2">
+            <a href="tech-gram.html" class="block text-sm text-muted-foreground hover:text-primary">Tech-Gram</a>
+            <a href="on-road-vehicle-breakdown.html"
+              class="block text-sm text-muted-foreground hover:text-primary">On-Road Vehicle Breakdown System</a>
+          </div>
+        </div>
+
+        <div class="border-b border-border/10 pb-2">
+          <div class="text-lg font-medium py-2">Education</div>
+          <div class="pl-4 space-y-2">
+            <a href="btech.html" class="block text-sm text-muted-foreground hover:text-primary">Master of Computer
+              Application (MCA)</a>
+            <a href="higher-secondary.html" class="block text-sm text-muted-foreground hover:text-primary">Bachelor's of
+              Computer Application (BCA)</a>
+          </div>
+        </div>
+
+        <div class="border-b border-border/10 pb-2">
+          <div class="text-lg font-medium py-2">Experience</div>
+          <div class="pl-4 space-y-2">
+            <a href="software-engineer.html" class="block text-sm text-muted-foreground hover:text-primary">Associate
+              Credential Architect – CertifyMe</a>
+            <a href="lab-assistance.html" class="block text-sm text-muted-foreground hover:text-primary">QA Intern –
+              CertifyMe</a>
+          </div>
+        </div>
+
+        <a href="#skills" class="text-lg font-medium py-2 border-b border-border/10">Skills</a>
+
+        <div class="border-b border-border/10 pb-2">
+          <div class="text-lg font-medium py-2">Feedback</div>
+          <div class="pl-4 space-y-2">
+            <a href="#achievements" class="block text-sm text-muted-foreground hover:text-primary">Achievements</a>
+            <a href="#testimonials" class="block text-sm text-muted-foreground hover:text-primary">Endorsements</a>
+          </div>
+        </div>
+
+        <a href="#contact" class="text-lg font-medium py-2 border-b border-border/10">Contact</a>
+
+        <a href="https://drive.google.com/file/d/1Rmz6mwrae_o5atHfvD9RBHyehYAlsYWg/view" target="_blank"
+          class="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors">
+          Download CV
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <!-- Backgrounds -->
+    <div class="absolute inset-0 -z-10 transition-opacity duration-700" id="hero-bg-minimal">
+      <div class="absolute inset-0 bg-background">
+        <div class="absolute inset-0 bg-gradient-to-b from-background/0 to-background"></div>
+      </div>
+    </div>
+    <div class="absolute inset-0 -z-10 transition-opacity duration-700 opacity-0" id="hero-bg-gradient">
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-purple-600/30 via-blue-500/20 to-pink-500/30 blur-3xl scale-110">
+        </div>
+        <div class="absolute inset-0 bg-background/60 backdrop-blur-[2px]"></div>
+      </div>
+    </div>
+    <div class="absolute inset-0 -z-10 transition-opacity duration-700 opacity-0" id="hero-bg-profile">
+      <div class="absolute inset-0 bg-background flex items-center justify-end opacity-10">
+        <div class="w-[800px] h-[800px] rounded-full bg-primary/20 blur-[120px] translate-x-1/2"></div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Content -->
+      <div class="space-y-8 text-center lg:text-left animate-fade-up opacity-0" style="animation-delay: 0.1s">
+        <div
+          class="inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-4">
+          Available for work
+        </div>
+
+        <h1 class="text-5xl lg:text-7xl font-heading font-bold tracking-tight leading-[1.1]">
+          Hi, I'm Neeraj V Salehittal
+          <br />
+          <span id="typewriter" class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            Software QA Engineer
+          </span>
+        </h1>
+
+        <p class="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
+          Quality Assurance &amp; Automation Tester at CertifyMe with experience in manual, API, regression, and
+          automation testing across SaaS platforms. MCA graduate focused on delivering stable, secure, high-quality
+          releases.
+        </p>
+
+        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <!-- <a id="openVideoBtn"
+            href="https://blr1.digitaloceanspaces.com/cme.dev.space/9/reflection/22/fb3fe024bfcc44e38e9f37df08339a67.mp4"
+            target="_blank" rel="noopener noreferrer"
+            class="bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-colors intro-video-btn">
+            <span class="btn-text">My Intro</span>
+            <span class="play-icon ml-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                <path d="M10 8L16 12L10 16V8Z" fill="currentColor" />
+              </svg>
+            </span>
+          </a> -->
+
+          <a href="/files/nova.pdf" download
+            class="border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-colors">
+            Download CV <i data-lucide="download" class="ml-2 w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Visuals -->
+      <div class="relative flex justify-center items-center animate-fade-up opacity-0" style="animation-delay: 0.3s">
+        <!-- Minimal/Gradient Visual -->
+        <div id="hero-visual-default" class="relative w-full aspect-square max-w-[500px]">
+          <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-[3rem] rotate-3 blur-xl">
+          </div>
+          <div
+            class="relative h-full w-full bg-card/30 backdrop-blur-sm border border-white/10 rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <div class="absolute inset-4 rounded-[1.5rem] overflow-hidden">
+              <img src="files/Green Black White Circle Badge Illustration Minimalist Movement Logo (7).png"
+                alt="Neeraj V Salehittal" class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-primary/20','to-accent/20','flex','items-center','justify-center');" />
+            </div>
+            <div class="absolute top-0 right-0 p-8 opacity-20">
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="currentColor">
+                <circle cx="50" cy="50" r="40" />
+              </svg>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-background/80 to-transparent">
+              <div class="space-y-2">
+                <div class="h-2 w-20 bg-primary/50 rounded-full"></div>
+                <div class="h-6 w-3/4 bg-foreground/20 rounded-lg"></div>
+                <div class="h-3 w-1/2 bg-foreground/10 rounded-lg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Visual (Hidden by default) -->
+        <div id="hero-visual-profile" class="hidden relative w-80 h-80 lg:w-[500px] lg:h-[500px]">
+          <div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-[spin_10s_linear_infinite]">
+          </div>
+          <div
+            class="absolute inset-4 rounded-full border-2 border-accent/20 animate-[spin_15s_linear_infinite_reverse]">
+          </div>
+          <div class="absolute inset-0 rounded-full overflow-hidden border-8 border-background shadow-2xl">
+            <img src="files/Green Black White Circle Badge Illustration Minimalist Movement Logo (7).png"
+              alt="Neeraj V Salehittal" class="w-full h-full object-cover" />
+          </div>
+          <div
+            class="absolute -bottom-4 -right-4 bg-card p-4 rounded-2xl shadow-xl border border-border/50 flex items-center gap-3 animate-bounce">
+            <div class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500">
+              <span class="font-bold">2</span>
+            </div>
+            <div>
+              <p class="text-xs text-muted-foreground">Projects</p>
+              <p class="font-bold">Completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Controls -->
+    <div
+      class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-background/50 backdrop-blur-md rounded-full border border-border/50">
+      <button onclick="setHeroVariant('minimal')"
+        class="hero-control px-4 py-1.5 rounded-full text-xs font-medium transition-colors hover:bg-muted"
+        data-variant="minimal">Minimal</button>
+      <button onclick="setHeroVariant('gradient')"
+        class="hero-control px-4 py-1.5 rounded-full text-xs font-medium transition-colors hover:bg-muted"
+        data-variant="gradient">Gradient</button>
+      <button onclick="setHeroVariant('profile')"
+        class="hero-control px-4 py-1.5 rounded-full text-xs font-medium transition-colors hover:bg-muted"
+        data-variant="profile">Profile</button>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-24 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-start scroll-reveal">
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">About Me</h2>
+            <div class="h-1 w-20 bg-primary rounded-full"></div>
+          </div>
+          <div class="prose prose-lg text-muted-foreground space-y-4">
+            <p>I am a Software QA Engineer and MCA graduate with hands-on experience in manual, API, regression, and
+              automation testing across SaaS platforms. Currently working as Associate Credential Architect at
+              CertifyMe, I lead production deployments and ensure high-quality, secure releases.</p>
+            <p>I specialize in functional and UI/UX testing, microservices validation, and defect management. Skilled in
+              Selenium, Postman, JMeter, and Jira, I am passionate about delivering stable software and continuously
+              improving testing processes with automation and best practices.</p>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-4">
+            <div class="bg-background/50 p-4 rounded-xl text-center">
+              <div class="text-3xl font-bold text-primary mb-1">2</div>
+              <div class="text-sm text-muted-foreground">Projects</div>
+            </div>
+            <div class="bg-background/50 p-4 rounded-xl text-center">
+              <div class="text-3xl font-bold text-primary mb-1">9</div>
+              <div class="text-sm text-muted-foreground">Endorsements</div>
+            </div>
+            <div class="bg-background/50 p-4 rounded-xl text-center">
+              <div class="text-3xl font-bold text-primary mb-1">4</div>
+              <div class="text-sm text-muted-foreground">Achievements</div>
+            </div>
+          </div>
+
+          <a href="https://drive.google.com/file/d/1Rmz6mwrae_o5atHfvD9RBHyehYAlsYWg/view" target="_blank"
+            class="border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors">
+            <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download Resume
+          </a>
+        </div>
+
+        <!-- Right Column: Specializations -->
+        <div class="space-y-8 bg-card p-8 rounded-3xl border border-border/50 shadow-lg">
+          <h3 class="text-2xl font-heading font-bold">Specializations</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
+              <div class="p-2 rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="check-circle" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">Manual &amp; API Testing</h4>
+                <p class="text-xs text-muted-foreground">Functional, UI/UX, regression, and Postman API testing</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
+              <div class="p-2 rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">Test Automation</h4>
+                <p class="text-xs text-muted-foreground">Selenium, Python, GitHub Actions, test frameworks</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
+              <div class="p-2 rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="activity" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">Performance Testing</h4>
+                <p class="text-xs text-muted-foreground">JMeter, load testing, microservices validation</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
+              <div class="p-2 rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="bug" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm">Defect Management</h4>
+                <p class="text-xs text-muted-foreground">Jira, defect tracking, reporting &amp; resolution</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="py-24">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 scroll-reveal">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-2">Featured Projects</h2>
+          <p class="text-muted-foreground">A selection of my recent work</p>
+        </div>
+        <div class="bg-muted/50 p-1 rounded-lg flex">
+          <button onclick="filterProjects('professional')"
+            class="project-filter px-6 py-2 rounded-md text-sm font-medium transition-all bg-background shadow-sm text-foreground"
+            data-filter="professional">Professional</button>
+          <button onclick="filterProjects('student')"
+            class="project-filter px-6 py-2 rounded-md text-sm font-medium transition-all text-muted-foreground hover:text-foreground"
+            data-filter="student">Student</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8" id="projects-grid">
+
+        <!-- Project: Tech-Gram -->
+        <div
+          class="project-card group h-full flex flex-col overflow-hidden rounded-xl border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <div
+              class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <img src="/files/img.jpg" alt="Tech-Gram"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-primary/20','to-accent/20','flex','items-center','justify-center'); this.parentElement.innerHTML += '<i data-lucide=\'folder\' class=\'w-16 h-16 text-primary/40\'></i>';">
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-xl font-bold font-heading">Tech-Gram</h3>
+            <p class="text-sm text-primary font-medium mb-2">Community Web App</p>
+            <p class="text-muted-foreground text-sm mb-4 line-clamp-3 flex-grow">Accessibility-first app with manual and
+              regression testing to ensure stable, inclusive UX for rural communities.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">HTML</span>
+              <span
+                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">CSS</span>
+              <span
+                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">JavaScript</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="tech-gram.html"
+                class="flex-1 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+                <i data-lucide="github" class="w-4 h-4 mr-2"></i> Code
+              </a>
+              <a href="tech-gram.html"
+                class="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+                <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: On-Road Vehicle Breakdown System -->
+        <div
+          class="project-card group h-full flex flex-col overflow-hidden rounded-xl border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <div
+              class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <img src="/files/img.jpg" alt="On-Road Vehicle Breakdown System"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-primary/20','to-accent/20','flex','items-center','justify-center'); this.parentElement.innerHTML += '<i data-lucide=\'folder\' class=\'w-16 h-16 text-primary/40\'></i>';">
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-xl font-bold font-heading">On-Road Vehicle Breakdown System</h3>
+            <p class="text-sm text-primary font-medium mb-2">Service Platform</p>
+            <p class="text-muted-foreground text-sm mb-4 line-clamp-3 flex-grow">A platform to connect stranded
+              motorists with nearby mechanics and towing services, featuring request tracking and status updates.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">Flask</span>
+              <span
+                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">Python</span>
+              <span
+                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">SQL</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="on-road-vehicle-breakdown.html"
+                class="flex-1 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+                <i data-lucide="github" class="w-4 h-4 mr-2"></i> Code
+              </a>
+              <a href="on-road-vehicle-breakdown.html"
+                class="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+                <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative h-48 overflow-hidden">
+          <div
+            class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+          <img src="/files/img.jpg" alt="E-Commerce Analytics Dashboard"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-primary/20','to-accent/20','flex','items-center','justify-center'); this.parentElement.innerHTML += '<i data-lucide=\'folder\' class=\'w-16 h-16 text-primary/40\'></i>';">
+        </div>
+        <div class="p-6 flex-grow flex flex-col">
+          <h3 class="text-xl font-bold font-heading">E-Commerce Analytics Dashboard</h3>
+          <p class="text-sm text-primary font-medium mb-2">Web Development</p>
+          <p class="text-muted-foreground text-sm mb-4 line-clamp-3 flex-grow">A comprehensive admin interface featuring
+            real-time sales metrics, inventory management, and customer behavior analytics with interactive charts and
+            data visualization.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">React</span>
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">Node.js</span>
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">D3.js</span>
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">PostgreSQL</span>
+          </div>
+          <div class="flex gap-2">
+            <a href="ecommerce-analytics-dashboard.html"
+              class="flex-1 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+              <i data-lucide="github" class="w-4 h-4 mr-2"></i> Code
+            </a>
+            <a href="ecommerce-analytics-dashboard.html"
+              class="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+              <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Healthcare Management System -->
+      <div
+        class="project-card professional group h-full flex flex-col overflow-hidden rounded-xl border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-xl transition-all">
+        <div class="relative h-48 overflow-hidden">
+          <div
+            class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+          <img src="/files/img.jpg" alt="Healthcare Management System"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            onerror="this.style.display='none';">
+          <div class="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center"
+            style="display:none" id="proj2-placeholder"></div>
+        </div>
+        <div class="p-6 flex-grow flex flex-col">
+          <h3 class="text-xl font-bold font-heading">Healthcare Management System</h3>
+          <p class="text-sm text-primary font-medium mb-2">Healthcare Tech</p>
+          <p class="text-muted-foreground text-sm mb-4 line-clamp-3 flex-grow">Patient management dashboard with
+            appointment scheduling, medical records tracking, and billing integration. Designed for streamlined clinic
+            operations and improved patient care.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">Vue.js</span>
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">Laravel</span>
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">MySQL</span>
+            <span
+              class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground">AWS</span>
+          </div>
+          <div class="flex gap-2">
+            <a href="healthcare-management-system.html"
+              class="flex-1 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+              <i data-lucide="github" class="w-4 h-4 mr-2"></i> Code
+            </a>
+            <a href="healthcare-management-system.html"
+              class="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 rounded-md text-sm font-medium flex items-center justify-center">
+              <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <script>
+        (function () {
+          // Limit projects to exactly two cards and enforce 2-column grid
+          try {
+            const grid = document.getElementById('projects-grid');
+            if (grid) {
+              const cards = grid.querySelectorAll('.project-card');
+              cards.forEach((card, idx) => { if (idx > 1) card.remove(); });
+              grid.classList.remove('lg:grid-cols-3');
+              grid.classList.add('md:grid-cols-2');
+            }
+          } catch (e) { }
+
+          // Theme persistence: save chosen theme and apply on load
+          const root = document.documentElement;
+          const saved = localStorage.getItem('theme');
+          if (saved === 'dark') root.classList.add('dark');
+          if (saved === 'light') root.classList.remove('dark');
+          function syncTheme() {
+            localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+          }
+          const t1 = document.getElementById('theme-toggle');
+          const t2 = document.getElementById('mobile-theme-toggle');
+          [t1, t2].filter(Boolean).forEach(btn => btn.addEventListener('click', () => setTimeout(syncTheme, 0)));
+
+          // Contact form submission via fetch to /api/contact
+          const form = document.getElementById('contact-form');
+          const statusEl = document.getElementById('contact-status');
+          if (form) {
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              statusEl.textContent = 'Sending...';
+              statusEl.className = 'mt-4 text-sm text-muted-foreground';
+              const formData = new FormData(form);
+              try {
+                const res = await fetch(form.action, {
+                  method: 'POST',
+                  headers: { 'Accept': 'application/json' },
+                  body: formData,
+                });
+                const data = await res.json().catch(() => ({}));
+                if (res.ok) {
+                  statusEl.textContent = 'Message sent successfully. I will get back to you shortly.';
+                  statusEl.className = 'mt-4 text-sm text-green-600';
+                  form.reset();
+                } else {
+                  statusEl.textContent = data.error || 'Failed to send message. Please try again later.';
+                  statusEl.className = 'mt-4 text-sm text-red-600';
+                }
+              } catch (err) {
+                statusEl.textContent = 'Network error. Please try again later.';
+                statusEl.className = 'mt-4 text-sm text-red-600';
+              }
+            });
+          }
+        })();
+    </script>
+
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="py-24" role="region" aria-labelledby="skills-heading">
+    <div class="container mx-auto px-6">
+      <header class="text-center mb-16 scroll-reveal">
+        <h2 id="skills-heading" class="text-3xl lg:text-4xl font-heading font-bold mb-4">Skills &amp; Expertise</h2>
+        <p class="text-muted-foreground">My technical toolbox</p>
+      </header>
+
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 scroll-reveal" role="list"
+        aria-label="Technical skills and expertise">
+
+        <!-- Skill 1: Manual Testing -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="check-circle" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">Manual Testing</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Functional
+                  Testing</span></li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Regression
+                  Testing</span></li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">UI/UX
+                  Testing</span></li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="95"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">95%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skill 2: API Testing -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="globe" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">API Testing</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Postman</span>
+              </li>
+              <li><span class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">REST
+                  APIs</span></li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Microservices</span>
+              </li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="90"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">90%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skill 3: Test Automation -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="cpu" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">Test Automation</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Selenium</span>
+              </li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Python</span>
+              </li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">GitHub
+                  Actions</span></li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="85"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">85%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skill 4: Performance Testing -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">Performance Testing</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">JMeter</span>
+              </li>
+              <li><span class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Load
+                  Testing</span></li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="80"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">80%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skill 5: Defect Management -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="bug" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">Defect Management</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Jira</span>
+              </li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Defect
+                  Tracking</span></li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Reporting</span>
+              </li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="90"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">90%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skill 6: Dev Tools -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="git-branch" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">Dev &amp; CI Tools</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">GitHub</span>
+              </li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">GitHub
+                  Actions</span></li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">SQL</span>
+              </li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="85"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">85%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skill 7: Programming -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="code-2" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">Programming</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Python</span>
+              </li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">SQL</span>
+              </li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Flask</span>
+              </li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="80"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">80%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skill 8: Productivity Tools -->
+        <article class="skill-card group" role="listitem">
+          <div
+            class="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+          </div>
+          <div class="skill-content">
+            <h3 class="text-lg font-bold font-heading mb-4">Productivity</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Microsoft
+                  Excel</span></li>
+              <li><span
+                  class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Agantic
+                  AI</span></li>
+              <li><span class="skill-tag px-2.5 py-1 rounded-md bg-muted text-xs font-medium text-muted-foreground">Test
+                  Plans</span></li>
+            </ul>
+            <div class="progress-container mt-3">
+              <div class="progress-track w-full bg-muted rounded-full h-2 overflow-hidden">
+                <div class="progress-bar bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                  style="width: 0%" data-percentage="85"></div>
+              </div>
+              <span class="progress-text text-xs text-muted-foreground mt-1 block">85%</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="py-24 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-8 scroll-reveal text-center">
+          <div class="flex items-center justify-center gap-3 mb-6">
+            <div class="p-3 bg-primary/10 rounded-xl text-primary">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <h2 class="text-3xl font-heading font-bold">Education</h2>
+          </div>
+
+          <div class="text-center mb-8">
+            <p class="text-lg text-muted-foreground italic max-w-2xl mx-auto">
+              "Building a strong academic foundation that fuels continuous learning and professional growth in the
+              ever-evolving tech landscape."
+            </p>
+          </div>
+
+          <div class="space-y-8 relative flex flex-col items-center">
+
+            <!-- MCA -->
+            <div class="relative bg-card p-8 rounded-lg border border-border/50 w-full max-w-3xl shadow-sm">
+              <div class="text-center space-y-4">
+                <div class="text-sm text-primary font-medium">2023 – 2024</div>
+                <h3 class="text-xl font-bold">Master of Computer Application (MCA)</h3>
+                <div class="text-muted-foreground">Global Institute of Management Science, Bangalore</div>
+                <p class="text-sm text-muted-foreground">CGPA: <span class="font-medium text-foreground">8.06</span></p>
+                <div class="pt-2"><a href="btech.html" class="text-sm text-primary hover:underline">View Details →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- BCA -->
+            <div class="relative bg-card p-8 rounded-lg border border-border/50 w-full max-w-3xl shadow-sm">
+              <div class="text-center space-y-4">
+                <div class="text-sm text-primary font-medium">2019 – 2022</div>
+                <h3 class="text-xl font-bold">Bachelor's of Computer Application (BCA)</h3>
+                <div class="text-muted-foreground">Shree Guru Sudhindra College of Computer Application, Bhatkal</div>
+                <p class="text-sm text-muted-foreground">Percentage: <span
+                    class="font-medium text-foreground">82.39%</span></p>
+                <div class="pt-2"><a href="higher-secondary.html" class="text-sm text-primary hover:underline">View
+                    Details →</a></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="py-24">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Professional Experience</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">My journey through the tech industry</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="timeline">
+
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">01/2025 – Present</div>
+              <div class="timeline-title">Associate Credential Architect (QA Tester)</div>
+              <div class="timeline-company">CertifyMe, Bangalore</div>
+              <div class="timeline-description">Performed manual, regression, and API testing for SaaS-based web and
+                mobile applications. Led production deployments managing Batch, Verify, Signing, and Cryptographic
+                Signing services ensuring secure and smooth releases.</div>
+              <div class="mt-4"><a href="software-engineer.html" class="text-sm text-primary hover:underline">View
+                  Details →</a></div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">06/2024 – 12/2024</div>
+              <div class="timeline-title">QA Intern</div>
+              <div class="timeline-company">CertifyMe, Bangalore</div>
+              <div class="timeline-description">Performed API testing using Postman to validate data accuracy and system
+                stability. Assisted in regression and integration testing across multiple SaaS modules and documented
+                test cases and defect reports.</div>
+              <div class="mt-4"><a href="lab-assistance.html" class="text-sm text-primary hover:underline">View Details
+                  →</a></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="py-24 bg-muted/30">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Achievements &amp; Certifications</h2>
+        <p class="text-muted-foreground">My earned credentials and certifications</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Achievement 1: JSpider Selection -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+              <i data-lucide="trophy" class="w-6 h-6"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold font-heading group-hover:text-primary transition-colors">Competitive
+                Selection – JSpider QA &amp; Testing Program</h3>
+              <p class="text-sm text-muted-foreground">Global Institute of Management Sciences</p>
+            </div>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">Selected as one of two candidates out of 300 students for the
+            JSPAD Training Tool — a competitive program focused on software testing, QA, and automation practices.</p>
+          <div
+            class="inline-flex items-center gap-1 text-xs font-bold text-green-600 uppercase tracking-wider bg-green-50 px-2 py-1 rounded">
+            <i data-lucide="star" class="w-3 h-3"></i> Achievement
+          </div>
+        </div>
+
+        <!-- Achievement 2: Zero Defects -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold font-heading group-hover:text-primary transition-colors">Zero Customer-Facing
+                Defects</h3>
+              <p class="text-sm text-muted-foreground">CertifyMe • 06/2025 – Present</p>
+            </div>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">Maintained zero customer-facing defects over two consecutive
+            quarters (Jul–Sep &amp; Sep–Dec), meeting and exceeding all defect resolution targets.</p>
+          <div
+            class="inline-flex items-center gap-1 text-xs font-bold text-green-600 uppercase tracking-wider bg-green-50 px-2 py-1 rounded">
+            <i data-lucide="check-circle" class="w-3 h-3"></i> Achievement
+          </div>
+        </div>
+
+        <!-- Certificate 1: Cybersecurity -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold font-heading group-hover:text-primary transition-colors">Introduction to
+                Cybersecurity</h3>
+              <p class="text-sm text-muted-foreground">10/2023 – 02/2024</p>
+            </div>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">Acquired knowledge of cybersecurity principles, threat
+            detection, risk management, and basic security practices applicable to IT and SaaS platforms.</p>
+          <div
+            class="inline-flex items-center gap-1 text-xs font-bold text-green-600 uppercase tracking-wider bg-green-50 px-2 py-1 rounded mb-4">
+            <i data-lucide="check-circle" class="w-3 h-3"></i> Certified
+          </div>
+        </div>
+
+        <!-- Certificate 2: Data Science IBM -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold font-heading group-hover:text-primary transition-colors">Data Science 101 –
+                IBM SkillsBuild</h3>
+              <p class="text-sm text-muted-foreground">06/2023 – 09/2023</p>
+            </div>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4">Completed a foundational program covering data analysis, data
+            visualization, and basic statistical techniques using Python and related tools.</p>
+          <div
+            class="inline-flex items-center gap-1 text-xs font-bold text-green-600 uppercase tracking-wider bg-green-50 px-2 py-1 rounded mb-4">
+            <i data-lucide="check-circle" class="w-3 h-3"></i> Certified
+          </div>
+          <br>
+          <a href="https://courses.skillsbuild.skillsnetwork.site/certificates/b3626c76c0604c799cf828d63626bb9f"
+            target="_blank"
+            class="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium text-sm transition-colors">
+            View Certificate <i data-lucide="external-link" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="py-24">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Endorsements</h2>
+        <p class="text-muted-foreground">What people say about my work</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Testimonial 1 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Neeraj demonstrated excellent analytical thinking and a thorough understanding of software quality
+            principles throughout his MCA program. His ability to design and execute test cases with precision, combined
+            with his eagerness to learn new tools, sets him apart. A dedicated student who takes ownership of his work."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Prof. Suresh Naik</h4>
+              <p class="text-sm text-muted-foreground">Faculty Guide</p>
+              <p class="text-sm text-primary">Global Institute of Management Science</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Neeraj stood out for his ability to quickly understand complex SaaS workflows and design effective test
+            strategies. His defect documentation and reporting were always clear and actionable. He is dependable,
+            hardworking, and a quick learner."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Dr. Ramesh Kumar</h4>
+              <p class="text-sm text-muted-foreground">HOD, Department of Computer Applications</p>
+              <p class="text-sm text-primary">Global Institute of Management Science</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Neeraj brings both technical precision and analytical thinking to quality assurance. His test case design,
+            regression coverage, and API validation were always thorough and well-structured. He is a promising QA
+            professional with a strong eye for detail."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Prof. Anita Sharma</h4>
+              <p class="text-sm text-muted-foreground">Software Testing Faculty</p>
+              <p class="text-sm text-primary">Global Institute of Management Science</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Working with Neeraj has been a great experience. He proactively identifies edge cases, catches critical
+            bugs early, and collaborates well across teams. His contribution to production stability has been invaluable
+            to our QA process."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Kedar Varghese</h4>
+              <p class="text-sm text-muted-foreground">Senior Developer</p>
+              <p class="text-sm text-primary">CertifyMe</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Neeraj guided our team through critical testing sprints with patience and clarity. He explains testing
+            logic clearly, ensures alignment across the team, and his leadership in production deployments made releases
+            much smoother and safer."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Arjun Menon</h4>
+              <p class="text-sm text-muted-foreground">Junior QA Engineer</p>
+              <p class="text-sm text-primary">CertifyMe</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Neeraj has consistently been one of the most dedicated QA contributors I've worked with. He takes ownership
+            of test coverage, communicates defects precisely, and goes above and beyond to ensure product quality. A
+            true team player."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Shreya Desai</h4>
+              <p class="text-sm text-muted-foreground">Product Manager</p>
+              <p class="text-sm text-primary">CertifyMe</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 7 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Neeraj completed his internship under my supervision and quickly adapted to real-world testing challenges.
+            His automation scripts for regression testing saved the team significant manual effort. He is responsible,
+            detail-oriented, and highly dependable."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Rahul Shetty</h4>
+              <p class="text-sm text-muted-foreground">QA Lead</p>
+              <p class="text-sm text-primary">CertifyMe, Bangalore</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 8 -->
+        <div
+          class="bg-card border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+          </div>
+          <blockquote class="text-muted-foreground mb-6 italic">
+            "Neeraj demonstrates excellent communication and professionalism. He consistently delivers thorough test
+            reports, aligns with product requirements, and incorporates feedback effectively. His dedication to quality
+            made our collaboration seamless."
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <i data-lucide="user" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-foreground">Vivek Nair</h4>
+              <p class="text-sm text-muted-foreground">Project Manager</p>
+              <p class="text-sm text-primary">CertifyMe, Bangalore</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-[hsl(var(--card))] border-t border-[hsl(var(--border))]/40 py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-1">
+          <a href="classic.html"
+            class="mb-4 inline-block hover:opacity-80 transition-opacity font-heading font-bold text-xl">
+            Neeraj VS
+          </a>
+          <p class="text-[hsl(var(--muted-foreground))] text-sm mb-4">Software QA Engineer | MCA Graduate based in
+            Bangalore South, India.</p>
+          <div class="flex gap-3">
+            <a href="https://github.com/Neerajvs32" target="_blank"
+              class="w-9 h-9 rounded-lg bg-[hsl(var(--muted))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--primary-foreground))] flex items-center justify-center transition-all border border-[hsl(var(--border))]/50">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/neeraj-vs/" target="_blank"
+              class="w-9 h-9 rounded-lg bg-[hsl(var(--muted))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--primary-foreground))] flex items-center justify-center transition-all border border-[hsl(var(--border))]/50">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-heading font-semibold mb-4 text-sm uppercase tracking-wider">Navigation</h3>
+          <ul class="space-y-2">
+            <li><a href="#about"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">About</a>
+            </li>
+            <li><a href="#projects"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Projects</a>
+            </li>
+            <li><a href="#education"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Education</a>
+            </li>
+            <li><a href="#experience"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Experience</a>
+            </li>
+            <li><a href="#skills"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Skills</a>
+            </li>
+            <li><a href="#contact"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-heading font-semibold mb-4 text-sm uppercase tracking-wider">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="#achievements"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Achievements</a>
+            </li>
+            <li><a href="#testimonials"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Testimonials</a>
+            </li>
+            <li><a href="https://drive.google.com/file/d/1Rmz6mwrae_o5atHfvD9RBHyehYAlsYWg/view"
+                download="Neeraj-Salehittal-Resume.pdf"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Resume</a>
+            </li>
+            <li><a href="mailto:neerajsalehittal3235@gmail.com"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Newsletter</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-heading font-semibold mb-4 text-sm uppercase tracking-wider">Get in Touch</h3>
+          <ul class="space-y-2">
+            <li><a href="#contact"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Contact
+                Me</a></li>
+            <li><a href="mailto:neerajsalehittal3235@gmail.com"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">neerajsalehittal3235@gmail.com</a>
+            </li>
+            <li><a href="tel:+919353585446"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">+91
+                93535 85446</a></li>
+            <li><a href="#contact"
+                class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] text-sm transition-colors">Hire
+                Me</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-[hsl(var(--border))]/40">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-[hsl(var(--muted-foreground))] text-sm">© 2026 Neeraj V Salehittal. All rights reserved.</p>
+          <div class="flex gap-6 text-sm">
+            <a href="#"
+              class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors">Privacy
+              Policy</a>
+            <a href="#"
+              class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors">Terms of
+              Service</a>
+            <a href="#"
+              class="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Theme Switcher
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const html = document.documentElement;
+    const themes = ['light', 'dark', 'gradient'];
+    let currentThemeIndex = 0;
+
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      currentThemeIndex = 1;
+      html.classList.add('dark');
+    } else if (localStorage.getItem('theme') === 'gradient') {
+      currentThemeIndex = 2;
+      html.classList.add('gradient');
+    }
+
+    function updateTheme() {
+      html.classList.remove('dark', 'gradient');
+      if (themes[currentThemeIndex] === 'dark') {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else if (themes[currentThemeIndex] === 'gradient') {
+        html.classList.add('gradient');
+        localStorage.setItem('theme', 'gradient');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    function cycleTheme() {
+      currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+      updateTheme();
+    }
+
+    if (themeToggle) themeToggle.addEventListener('click', cycleTheme);
+    if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', cycleTheme);
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 20) {
+        navbar.classList.add('bg-background/80', 'backdrop-blur-md', 'border-b', 'border-border/40', 'py-4', 'shadow-sm');
+        navbar.classList.remove('py-6');
+      } else {
+        navbar.classList.remove('bg-background/80', 'backdrop-blur-md', 'border-b', 'border-border/40', 'py-4', 'shadow-sm');
+        navbar.classList.add('py-6');
+      }
+    });
+
+    // Hero Typewriter
+    const roles = ["Software QA Engineer", "Automation Tester", "QA Specialist"];
+    let roleIndex = 0;
+    const typewriterEl = document.getElementById('typewriter');
+    if (typewriterEl) {
+      setInterval(() => {
+        roleIndex = (roleIndex + 1) % roles.length;
+        typewriterEl.style.opacity = 0;
+        setTimeout(() => {
+          typewriterEl.innerText = roles[roleIndex];
+          typewriterEl.style.transition = 'opacity 0.5s';
+          typewriterEl.style.opacity = 1;
+        }, 500);
+      }, 3000);
+    }
+
+    // Hero Variant Switcher
+    window.setHeroVariant = function (variant) {
+      const bgMinimal = document.getElementById('hero-bg-minimal');
+      const bgGradient = document.getElementById('hero-bg-gradient');
+      const bgProfile = document.getElementById('hero-bg-profile');
+      const visualDefault = document.getElementById('hero-visual-default');
+      const visualProfile = document.getElementById('hero-visual-profile');
+
+      if (bgMinimal) bgMinimal.style.opacity = variant === 'minimal' ? 1 : 0;
+      if (bgGradient) bgGradient.style.opacity = variant === 'gradient' ? 1 : 0;
+      if (bgProfile) bgProfile.style.opacity = variant === 'profile' ? 1 : 0;
+
+      if (variant === 'profile') {
+        if (visualDefault) visualDefault.classList.add('hidden');
+        if (visualProfile) visualProfile.classList.remove('hidden');
+      } else {
+        if (visualDefault) visualDefault.classList.remove('hidden');
+        if (visualProfile) visualProfile.classList.add('hidden');
+      }
+
+      document.querySelectorAll('.hero-control').forEach(btn => {
+        if (btn.dataset.variant === variant) {
+          btn.classList.add('bg-primary', 'text-primary-foreground');
+          btn.classList.remove('hover:bg-muted');
+        } else {
+          btn.classList.remove('bg-primary', 'text-primary-foreground');
+          btn.classList.add('hover:bg-muted');
+        }
+      });
+    };
+
+    // Init gradient hero
+    window.setHeroVariant('gradient');
+
+    // Project Filter
+    window.filterProjects = function (type) {
+      document.querySelectorAll('.project-filter').forEach(btn => {
+        if (btn.dataset.filter === type) {
+          btn.classList.add('bg-background', 'shadow-sm', 'text-foreground');
+          btn.classList.remove('text-muted-foreground');
+        } else {
+          btn.classList.remove('bg-background', 'shadow-sm', 'text-foreground');
+          btn.classList.add('text-muted-foreground');
+        }
+      });
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (card.classList.contains(type)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    };
+
+    // Scroll Reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+
+    // Progress Bars
+    const progressObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const pct = bar.getAttribute('data-percentage');
+          requestAnimationFrame(() => { bar.style.width = pct + '%'; });
+          progressObserver.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.progress-bar[data-percentage]').forEach(bar => progressObserver.observe(bar));
+
+    // Init Lucide Icons
+    lucide.createIcons();
+  </script>
+
+  <!-- ===== CONTACT (moved to bottom) ===== -->
+  <section id="contact" class="py-24 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent -z-10"></div>
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-6">Let's Work Together</h2>
+          <p class="text-muted-foreground text-lg mb-12">Have a project in mind or just want to say hi? I'm always open
+            to discussing new projects.</p>
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-primary/10 rounded-full text-primary"><i data-lucide="mail" class="w-6 h-6"></i></div>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Email</h4>
+                <a href="mailto:neerajsalehittal3235@gmail.com"
+                  class="text-muted-foreground hover:text-primary">neerajsalehittal3235@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-primary/10 rounded-full text-primary"><i data-lucide="phone" class="w-6 h-6"></i></div>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Phone</h4>
+                <a href="tel:+919353585446" class="text-muted-foreground hover:text-primary">+91 93535 85446</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-primary/10 rounded-full text-primary"><i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Location</h4>
+                <p class="text-muted-foreground">Bangalore South, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-card p-8 rounded-3xl border border-border/50 shadow-lg">
+          <form id="contact-form" action="/api/contact" method="POST" class="space-y-6">
+            <input type="hidden" name="_ignore" value="1">
+            <input type="hidden" name="subject" value="New message from Portfolio Contact Form">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="space-y-2">
+              <label class="text-sm font-medium leading-none" for="cf-name">Name</label>
+              <input id="cf-name" name="name" required
+                class="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                placeholder="John Doe" />
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-medium leading-none" for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" required
+                class="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                placeholder="john@example.com" />
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-medium leading-none" for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" required
+                class="flex min-h-[120px] w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                placeholder="Tell me about your project..."></textarea>
+            </div>
+            <div id="form-status" class="text-sm text-muted-foreground"></div>
+            <button type="submit"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-4 py-2 w-full transition-colors">
+              Send Message <i data-lucide="send" class="ml-2 w-4 h-4"></i>
+            </button>
+          </form>
+          <div id="contact-status" class="mt-4 text-sm"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        const key = (form.querySelector('input[name="access_key"]') || {}).value || '';
+        if (!key || key.indexOf('REPLACE_WITH_WEB3FORMS_ACCESS_KEY') === 0) {
+          // Fallback to mailto if no Web3Forms key provided
+          e.preventDefault();
+          const to = 'neerajsalehittal3235@gmail.com';
+          const name = (form.querySelector('[name="name"]').value || '').trim();
+          const email = (form.querySelector('[name="email"]').value || '').trim();
+          const message = (form.querySelector('[name="message"]').value || '').trim();
+          const subject = encodeURIComponent('Portfolio Contact Form');
+          const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+          window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+          const status = document.getElementById('form-status');
+          if (status) status.textContent = 'Opening your email client to send the message...';
+        }
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

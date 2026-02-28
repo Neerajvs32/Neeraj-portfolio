@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Restaurant Operations Panel | Aisha Banu Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] } } }
+    }
+  </script>
+  <style>
+    :root { --background:0 0% 100%;--foreground:240 10% 3.9%;--card:0 0% 100%;--primary:240 5.9% 10%;--primary-foreground:0 0% 98%;--muted:240 4.8% 95.9%;--muted-foreground:240 3.8% 46.1%;--border:240 5.9% 90%; }
+    .dark { --background:240 10% 3.9%;--foreground:0 0% 98%;--card:240 10% 3.9%;--primary:0 0% 98%;--primary-foreground:240 5.9% 10%;--muted:240 3.7% 15.9%;--muted-foreground:240 5% 64.9%;--border:240 3.7% 15.9%; }
+    body { background-color:hsl(var(--background));color:hsl(var(--foreground));font-family:'Plus Jakarta Sans',sans-serif;transition:background-color 0.3s,color 0.3s; }
+    .card { background-color:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem; }
+    .text-muted { color:hsl(var(--muted-foreground)); }
+    .badge { display:inline-flex;align-items:center;padding:0.25rem 0.75rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background-color:hsl(var(--muted));color:hsl(var(--muted-foreground)); }
+  </style>
+</head>
+<body>
+  <nav style="border-bottom:1px solid hsl(var(--border));background-color:hsl(var(--background)/0.95);" class="sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="classic.html#projects" class="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+      </a>
+      <span class="text-sm font-heading font-bold">Aisha Banu</span>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:opacity-70 transition-opacity">
+        <i data-lucide="sun" class="w-4 h-4 dark:hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6" style="background-color:hsl(var(--muted));color:hsl(var(--muted-foreground));">
+        <i data-lucide="utensils" class="w-4 h-4"></i> Restaurant Technology &bull; Completed
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-heading font-bold mb-4">Restaurant Operations Panel</h1>
+      <p class="text-xl text-muted max-w-2xl mx-auto">A digital restaurant operations dashboard for tracking table orders, inventory usage, staff activity, revenue trends, and kitchen status in real time.</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-6 mb-10">
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">16,000</div>
+        <div class="text-sm text-muted">Lines of Code</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">290</div>
+        <div class="text-sm text-muted">Commits</div>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-2xl font-heading font-bold mb-1">7 months</div>
+        <div class="text-sm text-muted">Duration</div>
+      </div>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div><div class="text-sm text-muted mb-1">Role</div><div class="font-semibold">Full Stack Developer</div></div>
+        <div><div class="text-sm text-muted mb-1">Team Size</div><div class="font-semibold">3 members</div></div>
+        <div><div class="text-sm text-muted mb-1">Status</div><div class="font-semibold" style="color:hsl(142 76% 36%);">Completed</div></div>
+      </div>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+        <i data-lucide="file-text" class="w-5 h-5"></i> Overview
+      </h2>
+      <p class="text-muted leading-relaxed mb-6">A digital restaurant operations dashboard for tracking table orders, inventory usage, staff activity, revenue trends, and kitchen status in real time.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div><h3 class="font-semibold mb-2">Objective</h3><p class="text-muted text-sm leading-relaxed">Reduce delays, eliminate order confusion, and streamline restaurant floor and kitchen communication digitally.</p></div>
+        <div><h3 class="font-semibold mb-2">Outcome</h3><p class="text-muted text-sm leading-relaxed">Increased operational clarity, reduced manual errors, and helped managers optimize staff scheduling and food service efficiency.</p></div>
+      </div>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="list-checks" class="w-5 h-5"></i> Key Features
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Order Monitoring</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Inventory Usage Tracking</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Sales Performance Dashboard</span></li>
+        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 shrink-0" style="color:hsl(var(--primary));"></i><span class="text-muted">Staff Management Panel</span></li>
+      </ul>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="zap" class="w-5 h-5"></i> Technologies Used
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="badge">React.js</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">MySQL</span>
+      </div>
+    </div>
+
+    <div class="card p-8 mb-10">
+      <h2 class="text-xl font-heading font-bold mb-6 flex items-center gap-2">
+        <i data-lucide="alert-triangle" class="w-5 h-5"></i> Challenges
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 mt-0.5 shrink-0 text-muted"></i><span class="text-muted">Managing large datasets from multiple restaurant operations</span></li>
+        <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 mt-0.5 shrink-0 text-muted"></i><span class="text-muted">Creating responsive UI components for kitchen displays</span></li>
+        <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 mt-0.5 shrink-0 text-muted"></i><span class="text-muted">Ensuring data accuracy during peak hours</span></li>
+        <li class="flex items-start gap-3"><i data-lucide="minus" class="w-4 h-4 mt-0.5 shrink-0 text-muted"></i><span class="text-muted">Real-time synchronization between front and back of house</span></li>
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <a href="classic.html#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium" style="background-color:hsl(var(--primary));color:hsl(var(--primary-foreground));">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Projects
+      </a>
+    </div>
+  </main>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
